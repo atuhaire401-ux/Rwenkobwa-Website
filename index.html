@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rwenkobwa Secondary School</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+        }
+
+        header {
+            background-color: #075c3c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        header h1 {
+            margin: 10px;
+        }
+
+        nav {
+            background-color: #043b27;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .hero {
+            height: 450px;
+            background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+            url("images/school.jpg");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .button {
+            background-color: #ffd700;
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        h2 {
+            color: #075c3c;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 280px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #043b27;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width:700px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="images/badge.jpg" alt="School Badge">
+
+    <h1>RWENKOBWA SECONDARY SCHOOL</h1>
+
+    <p>Education • Discipline • Excellence</p>
+
+</header>
+
+<nav>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="administration.html">Administration</a>
+    <a href="academics.html">Academics</a>
+    <a href="staff.html">Staff</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="boarding.html">Boarding</a>
+    <a href="sports.html">Sports</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="hero">
+
+    <div>
+
+        <h2>Welcome to Rwenkobwa Secondary School</h2>
+
+        <p>
+            Inspiring learners for academic success,
+            leadership and responsible citizenship.
+        </p>
+
+        <br>
+
+        <a class="button" href="about.html">Discover Our School</a>
+
+    </div>
+
+</div>
+
+<section>
+
+    <h2>Welcome Message</h2>
+
+    <p>
+        Welcome to Rwenkobwa Secondary School.
+        Our school is committed to providing quality education
+        in a disciplined, safe and supportive environment.
+    </p>
+
+    <p>
+        We believe in developing learners academically,
+        morally, socially and physically.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Explore Our School</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="images/classroom.jpg">
+            <h3>Academics</h3>
+            <p>Explore our classes and subjects.</p>
+            <a href="academics.html">View Academics</a>
+        </div>
+
+        <div class="card">
+            <img src="images/computerlab.jpg">
+            <h3>Facilities</h3>
+            <p>Discover our laboratories and school facilities.</p>
+            <a href="facilities.html">View Facilities</a>
+        </div>
+
+        <div class="card">
+            <img src="images/football.jpg">
+            <h3>Sports</h3>
+            <p>Discover our sporting activities.</p>
+            <a href="sports.html">View Sports</a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>&copy; 2026 Rwenkobwa Secondary School</p>
+
+    <p>Education • Discipline • Excellence</p>
+
+</footer>
+
+</body>
+</html>
