@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gallery - Rwenkobwa Secondary School</title>
 
@@ -87,6 +89,106 @@ footer {
     text-align:center;
     padding:25px;
 }
+/* Make the website fit on smartphones */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    padding: 10px;
+}
+
+/* Smartphone screen */
+@media screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.gallery img {
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 85%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
 
 </style>
 </head>
@@ -120,24 +222,88 @@ footer {
 
 <div class="gallery">
 
-<img src="images/school.jpeg">
-<img src="images/buildings.jpg">
-<img src="images/classrooms.jpeg">
-<img src="images/computerlab.jpeg">
-<img src="images/mainhall.jpeg">
-<img src="images/domitory.jpeg">
-<img src="images/boarding.jpg">
-<img src="images/students.jpg">
-<img src="images/dining.jpg">
-<img src="images/football.jpg">
-<img src="images/volleyball.jpg">
-<img src="images/athletics.jpg">
-<img src="images/prom1.jpeg">
-<img src="images/prom2.jpeg">
-<img src="images/prom3.jpeg">
-<img src="images/prom4.jpeg">
-<img src="images/prom5.jpeg">
-<img src="images/prom6.jpeg">
+<img src="images/school.jpeg"
+onclik="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/buildings.jpg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/classrooms.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/computerlab.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/mainhall.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/domitory.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/boarding.jpg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/students.jpg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/dining.jpg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/football.jpg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/volleyball.jpg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/athletics.jpg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/prom1.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/prom2.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+ <img src="images/prom3.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+   <img src="images/prom4.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+    <img src="images/prom5.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+      <img src="images/prom6.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+       <img src="images/chaplain1.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+     <img src="images/chaplain2.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+   <img src="images/chaplain3.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+ <img src="images/chaplain4.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+<img src="images/chaplain5.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+ <img src="images/chaplain6.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+   <img src="images/chaplain7.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+    <img src="images/chaplain8.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+      <img src="images/chaplain9.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
+
+         <img src="images/chaplain10.jpeg"
+onclick="openImage(this.src)" style="cursor:pointer;">
 </div>
 
 <h2>Our School Videos</h2>
@@ -169,6 +335,16 @@ footer {
     </div>
 
 </div>
+<script>
+    function openImage(imageSource) {
+        document.getElementById("imagePopup").style.display = "flex";
+        document.getElementById("largeImage").src = imageSource;
+    }
+
+    function closeImage() {
+        document.getElementById("imagePopup").style.display = "none";
+    }
+</script>
 
 <footer>
 
