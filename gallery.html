@@ -61,6 +61,25 @@ h2 {
 .gallery img:hover {
     transform:scale(1.03);
 }
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-box {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+}
+
+.video-box video {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
 
 footer {
     background:#043b27;
@@ -119,6 +138,36 @@ footer {
 <img src="images/prom4.jpeg">
 <img src="images/prom5.jpeg">
 <img src="images/prom6.jpeg">
+</div>
+
+<h2>Our School Videos</h2>
+
+<div class="video-gallery">
+
+    <div class="video-box">
+        <video controls width="300">
+            <source src="videos/choir.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+        <p>School Sports</p>
+    </div>
+
+    <div class="video-box">
+        <video controls width="300">
+            <source src="videos/alevel.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+        <p>School Event</p>
+    </div>
+
+    <div class="video-box">
+        <video controls width="300">
+            <source src="videos/studentparent.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+        <p>Students Activities</p>
+    </div>
+
 </div>
 
 <footer>
