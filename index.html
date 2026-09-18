@@ -1,306 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rwenkobwa Secondary School</title>
+<title>Rwenkobwa Secondary School | Home</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f7f6;
-        }
-
-        header {
-            background-color: #075c3c;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        header img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-
-        header h1 {
-            margin: 10px;
-            font-family:Algerian;
-            pading:20px;
-        }
-
-        nav {
-            background-color: #043b27;
-            text-align: center;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 8px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: yellow;
-        }
-
-        .hero {
-            height: 450px;
-            background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-            url("images/school.jpeg");
-            background-size: cover;
-            background-position: center;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero h2 {
-            font-size: 42px;
-        }
-
-        .hero p {
-            font-size: 20px;
-        }
-
-        .button {
-            background-color: #ffd700;
-            color: black;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        section {
-            padding: 50px 8%;
-            text-align: center;
-        }
-
-        h2 {
-            color: #075c3c;
-        }
-
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .card {
-            background-color: white;
-            width: 280px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px #ccc;
-        }
-
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        footer {
-            background-color: #043b27;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        @media(max-width:700px) {
-            nav a {
-                display: block;
-                margin: 10px;
-            }
-
-            .hero h2 {
-                font-size: 28px;
-            }
-        }
-/* Make the website fit on smartphones */
-* {
-    box-sizing: border-box;
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#222;line-height:1.6}
+header{background:green;color:white;padding:15px 5%}
+.header{max-width:1200px;margin:auto;display:flex;align-items:center;gap:20px}
+.logo{width:75px;height:75px;border-radius:50%;object-fit:cover;border:3px solid white}
+h1{font-family:Algerian,Georgia,serif}
+nav{background:#022b52;position:sticky;top:0;z-index:1000}
+.nav{max-width:1200px;margin:auto;display:flex;justify-content:center;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;padding:12px 10px;font-weight:bold}
+nav a:hover{background:#0b72b9;border-radius:5px}
+.hero{min-height:500px;background:linear-gradient(#003b6688,#003b6688),url("images/school.png") center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:30px}
+.hero div{max-width:850px}
+.hero h2{font-size:clamp(30px,6vw,55px)}
+.hero p{font-size:20px;margin:20px 0}
+.button{display:inline-block;background:#f5b400;color:#111;padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:bold;margin:5px}
+section{padding:55px 5%}
+.container{max-width:1200px;margin:auto}
+.title{text-align:center;margin-bottom:30px}
+.title h2{color:#063970;font-size:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:25px;border-radius:10px;box-shadow:0 3px 12px #0002}
+.card h3{color:#063970;margin-bottom:10px}
+.about{background:white}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.about-img{width:100%;border-radius:10px;cursor:pointer}
+footer{background:green;color:white;padding:40px 5% 20px}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px}
+footer h3{color:#f5b400;margin-bottom:12px}
+footer a{color:white;text-decoration:none}
+.bottom{text-align:center;border-top:1px solid #456;margin-top:25px;padding-top:20px}
+.popup{display:none;position:fixed;inset:0;background:#000d;z-index:2000;align-items:center;justify-content:center}
+.popup img{max-width:90%;max-height:90%}
+.close{position:absolute;right:30px;top:10px;color:white;font-size:45px;cursor:pointer}
+@media(max-width:700px){
+.header{flex-direction:column;text-align:center}
+nav a{font-size:12px;padding:9px 6px}
+.about-grid{grid-template-columns:1fr}
+.hero{min-height:420px}
 }
-
-body {
-    margin: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-nav a {
-    padding: 10px;
-}
-
-/* Smartphone screen */
-@media screen and (max-width: 600px) {
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    nav {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .container {
-        width: 94%;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-    </style>
+</style>
 </head>
 
 <body>
 
 <header>
-
-    <img src="images/badge.jpg" alt="School Badge">
-
-    <h1 font-style="algerian">RWENKOBWA SECONDARY SCHOOL</font></h1>
-
-    <p>Education • Discipline • Excellence</p>
-
+<div class="header">
+<img src="images/badge.jpg" class="logo" onclick="openImage(this.src)">
+<div>
+<h1>RWENKOBWA SECONDARY SCHOOL</h1>
+<p>Knowledge • Discipline • Excellence</p>
+</div>
+</div>
 </header>
 
 <nav>
-
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="administration.html">Administration</a>
-    <a href="academics.html">Academics</a>
-    <a href="staff.html">Staff</a>
-    <a href="facilities.html">Facilities</a>
-    <a href="boarding.html">Boarding</a>
-    <a href="sports.html">Sports</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="academics.html">Academics</a>
+<a href="fees.html">Fees</a>
+<a href="sports.html">Sports</a>
+<a href="activities.html">Activities</a>
+<a href="gallery.html">Gallery</a>
+<a href="staff.html">Staff</a>
+<a href="facilities.html">Facilities</a>
+<a href="curriculum.html">Curriculum</a>
+<a href="application.html">Apply</a>
+<a href="contact.html">Contact</a>
+</div>
 </nav>
 
-<div class="hero">
+<section class="hero">
+<div>
+<h2>Welcome to Rwenkobwa Secondary School</h2>
+<p>Building knowledge, discipline, talents and responsible citizens.</p>
+<a href="application.html" class="button">APPLY ONLINE</a>
+<a href="about.html" class="button">LEARN MORE</a>
+</div>
+</section>
 
-    <div>
-
-        <h2>Welcome to Rwenkobwa Secondary School</h2>
-
-        <p>
-            Inspiring learners for academic success,
-            leadership and responsible citizenship.
-        </p>
-
-        <br>
-
-        <a class="button" href="about.html">Discover Our School</a>
-
-    </div>
-
+<section class="about">
+<div class="container">
+<div class="title">
+<h2>Welcome to Our School</h2>
 </div>
 
-<section>
+<div class="about-grid">
+<div>
+<h3>About Rwenkobwa Secondary School</h3>
+<p>Rwenkobwa Secondary School is committed to providing quality education in a disciplined, supportive and friendly learning environment.</p>
+<br>
+<p>We promote academic excellence, leadership, sports, creativity, practical skills and good character among our learners.</p>
+<br>
+<a href="about.html" class="button">READ MORE</a>
+</div>
 
-    <h2>Welcome Message</h2>
-
-    <p>
-        Welcome to Rwenkobwa Secondary School.
-        Our school is committed to providing quality education
-        in a disciplined, safe and supportive environment.
-    </p>
-
-    <p>
-        We believe in developing learners academically,
-        morally, socially and physically.
-    </p>
-
+<div>
+<img src="images/school.png" class="about-img" onclick="openImage(this.src)">
+</div>
+</div>
+</div>
 </section>
 
 <section>
+<div class="container">
+<div class="title"><h2>Why Choose Our School?</h2></div>
 
-    <h2>Explore Our School</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <img src="images/classrooms.jpeg">
-            <h3>Academics</h3>
-            <p>Explore our classes and subjects.</p>
-            <a href="academics.html">View Academics</a>
-        </div>
-
-        <div class="card">
-            <img src="images/mainhall.jpeg">
-            <h3>Facilities</h3>
-            <p>Our Main Hall is a central place at <br>Rwenkobwa Secondary School where students, <br>teachers, and visitors come together for important school activities</p>
-            <a href="facilities.html">View Facilities</a>
-        </div>
-
-        <div class="card">
-            <img src="images/football.jpg">
-            <h3>Sports</h3>
-            <p>Discover our sporting activities.</p>
-            <a href="sports.html">View Sports</a>
-        </div>
-
-    </div>
-
+<div class="cards">
+<div class="card"><h3>Academic Excellence</h3><p>We encourage learners to achieve their highest academic potential.</p></div>
+<div class="card"><h3>Discipline</h3><p>We promote responsibility, respect and good character.</p></div>
+<div class="card"><h3>Talent Development</h3><p>Students develop their talents through sports, music, drama and clubs.</p></div>
+<div class="card"><h3>Practical Skills</h3><p>Students participate in practical projects that prepare them for life.</p></div>
+</div>
+</div>
 </section>
 
 <footer>
-
-    <p>&copy; 2026 Rwenkobwa Secondary School</p>
-
-    <p>Education • Discipline • Excellence</p>
-
+<div class="footer-grid">
+<div><h3>Rwenkobwa Secondary School</h3><p>Quality education for a better future.</p></div>
+<div><h3>Quick Links</h3><p><a href="about.html">About</a></p><p><a href="academics.html">Academics</a></p><p><a href="gallery.html">Gallery</a></p></div>
+<div><h3>Student Services</h3><p><a href="fees.html">Fees</a></p><p><a href="application.html">Apply Online</a></p><p><a href="contact.html">Contact</a></p></div>
+<div><h3>Apply Now</h3><p>Interested in joining us?</p><a href="application.html" class="button">APPLY ONLINE</a></div>
+</div>
+<div class="bottom">&copy; 2026 Rwenkobwa Secondary School. All Rights Reserved.</div>
 </footer>
+
+<div class="popup" id="popup" onclick="closeImage()">
+<span class="close">&times;</span>
+<img id="largeImage">
+</div>
+
+<script>
+function openImage(src){
+document.getElementById("popup").style.display="flex";
+document.getElementById("largeImage").src=src;
+}
+function closeImage(){
+document.getElementById("popup").style.display="none";
+}
+</script>
 
 </body>
 </html>

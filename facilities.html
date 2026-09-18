@@ -1,220 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Facilities - Rwenkobwa Secondary School</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Facilities | Rwenkobwa Secondary School</title>
 <style>
-
-body {
-    margin:0;
-    font-family:Arial;
-    background:#f4f7f6;
-}
-
-header {
-    background:#075c3c;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-header img {
-    width:80px;
-    height:80px;
-    border-radius:50%;
-}
-
-nav {
-    background:#043b27;
-    text-align:center;
-    padding:15px;
-}
-
-nav a {
-    color:white;
-    text-decoration:none;
-    margin:8px;
-    font-weight:bold;
-}
-
-h2 {
-    text-align:center;
-    color:#075c3c;
-}
-
-.cards {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
-    padding:40px;
-}
-
-.card {
-    width:280px;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 3px 10px #ccc;
-    text-align:center;
-}
-
-.card img {
-    width:100%;
-    height:190px;
-    object-fit:cover;
-    border-radius:8px;
-}
-
-footer {
-    background:#043b27;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-/* Make the website fit on smartphones */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-nav a {
-    padding: 10px;
-}
-
-/* Smartphone screen */
-@media screen and (max-width: 600px) {
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    nav {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .container {
-        width: 94%;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
+*{box-sizing:border-box}body{font-family:Arial;margin:0;background:#f4f7fb}
+header{background:green;color:white;text-align:center;padding:20px}header h1{font-family:Algerian,Georgia,serif}
+nav{background:#022b52;position:sticky;top:0}.nav{display:flex;justify-content:center;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;padding:11px 8px;font-weight:bold}nav a:hover{background:#0b72b9}
+section{padding:50px 5%}.container{max-width:1100px;margin:auto}
+h2{text-align:center;color:#063970;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;padding:20px;border-radius:10px;box-shadow:0 3px 12px #0002}
+.card img{width:100%;height:200px;object-fit:cover;border-radius:8px;cursor:pointer}
+.card h3{color:#063970}
+footer{background:green;color:white;text-align:center;padding:35px}
+@media(max-width:700px){nav a{font-size:12px;padding:8px 5px}}
 </style>
 </head>
-
 <body>
 
-<header>
+<header><h1>RWENKOBWA SECONDARY SCHOOL</h1><p>School Facilities</p></header>
 
-<img src="images/badge.jpg">
+<nav><div class="nav">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="academics.html">Academics</a><a href="fees.html">Fees</a>
+<a href="sports.html">Sports</a><a href="activities.html">Activities</a><a href="gallery.html">Gallery</a><a href="staff.html">Staff</a>
+<a href="facilities.html">Facilities</a><a href="curriculum.html">Curriculum</a><a href="application.html">Apply</a><a href="contact.html">Contact</a>
+</div></nav>
 
-<h1>RWENKOBWA SECONDARY SCHOOL</h1>
-
-</header>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="administration.html">Administration</a>
-<a href="academics.html">Academics</a>
-<a href="staff.html">Staff</a>
-<a href="facilities.html">Facilities</a>
-<a href="boarding.html">Boarding</a>
-<a href="sports.html">Sports</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-<h2>School Facilities</h2>
+<section>
+<div class="container">
+<h2>Our School Facilities</h2>
 
 <div class="cards">
 
-<div class="card">
-<img src="images/buildings.jpg">
-<h3>School Buildings</h3>
-<p>Our school buildings provide facilities for learning and administration.</p>
-</div>
+<div class="card"><img src="images/classroom2.png" onclick="openImage(this.src)"><h3>Classrooms</h3><p>The classrooms at Rwenkobwa Secondary School provide a clean and comfortable environment for students to learn. <br>They are arranged to support teaching, discussion and group activities. <br>The classrooms help students concentrate on their studies and develop knowledge, skills and good learning habits.</p></div>
 
-<div class="card">
-<img src="images/classrooms.jpeg">
-<h3>Classrooms</h3>
-<p>Our classrooms provide a suitable learning environment.</p>
-</div>
+<div class="card"><img src="images/laboratory.jpg" onclick="openImage(this.src)"><h3>Laboratory</h3><p>The laboratory at Rwenkobwa Secondary School provides students with a suitable environment for conducting science experiments and practical lessons. <br>It helps students understand scientific concepts through hands-on activities, observation and research. <br>The laboratory supports the teaching of subjects such as Biology, Chemistry and Physics.</p></div>
 
-<div class="card">
-<img src="images/computerlab.jpeg">
-<h3>Computer Laboratory</h3>
-<p>Students learn computer and ICT skills using the computer laboratory.</p>
-</div>
+<div class="card"><img src="images/library.jpg" onclick="openImage(this.src)"><h3>Library</h3><p>The library at Rwenkobwa Secondary School provides students with a quiet and suitable environment for reading and studying.<br> It contains learning materials and reference books that support students in their academic work. <br>The library also encourages a culture of reading, research, self-study and continuous learning.</p></div>
 
-<div class="card">
-<img src="images/mainhall.jpeg">
-<h3>Main hall</h3>
-<p>The main hall is an important place at <br>Rwenkobwa Secondary School where students<br> and staff gather for different activities.<br> It is used for school meetings, assemblies, celebrations, presentations, seminars, and other important events. The hall provides a spacious and comfortable environment where students can learn, interact, and share ideas. It also promotes unity, teamwork,
- and cooperation among students and staff.</p>
-</div>
+<div class="card"><img src="images/dormitory.png" onclick="openImage(this.src)"><h3>Dormitories</h3><p>The dormitory at Rwenkobwa Secondary School provides students with a comfortable and organized place to stay during their school life. <br>It promotes discipline, cleanliness, cooperation and responsibility among students. <br>The dormitory environment also helps students develop good habits while enjoying time with their fellow students.</p></div>
 
-<div class="card">
-<img src="images/domitory.jpeg">
-<h3>Domitory</h3>
-<p>At Rwenkobwa Secondary School, dormitories provide students with <br>a safe, clean, and comfortable place to rest after classes.<br>Dormitories also help students develop important values such as <br>responsibility, cooperation, cleanliness, and respect.</p>
-</div>
+<div class="card"><img src="images/mainhall.png" onclick="openImage(this.src)"><h3>Main Hall</h3><p>The main hall at Rwenkobwa Secondary School is an important place for school gatherings and activities.<br> It provides space for assemblies, meetings, celebrations, presentations, prayers and other school events. <br>The hall brings students and staff together and provides a suitable environment for learning, sharing ideas and building teamwork.</p></div>
+
+<div class="card"><img src="images/compound.png" onclick="openImage(this.src)"><h3>compound</h3><p>Rwenkobwa Secondary School has a clean, green and <br>well-organized compound that provides a peaceful environment for learning. <br>The compound has beautiful gardens, trees, flowers, pathways, classrooms and other school buildings.<br> Students can enjoy a safe and comfortable environment while studying and taking part in school activities.</p></div>
 
 </div>
+</div>
+</section>
 
-<footer>
+<div id="popup" style="display:none;position:fixed;inset:0;background:#000d;align-items:center;justify-content:center">
+<span onclick="closeImage()" style="position:absolute;right:30px;top:10px;color:white;font-size:45px">&times;</span>
+<img id="largeImage" style="max-width:90%;max-height:90%">
+</div>
 
-<p>&copy; 2026 Rwenkobwa Secondary School</p>
+<script>
+function openImage(src){popup.style.display="flex";largeImage.src=src}
+function closeImage(){popup.style.display="none"}
+</script>
 
-</footer>
-
+<footer>&copy; 2026 Rwenkobwa Secondary School</footer>
 </body>
 </html>

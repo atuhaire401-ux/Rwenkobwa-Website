@@ -1,356 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gallery - Rwenkobwa Secondary School</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Gallery | Rwenkobwa Secondary School</title>
 <style>
-
-body {
-    margin:0;
-    font-family:Arial;
-    background:#f4f7f6;
-}
-
-header {
-    background:#075c3c;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-header img {
-    width:80px;
-    height:80px;
-    border-radius:50%;
-}
-
-nav {
-    background:#043b27;
-    text-align:center;
-    padding:15px;
-}
-
-nav a {
-    color:white;
-    text-decoration:none;
-    margin:8px;
-    font-weight:bold;
-}
-
-h2 {
-    text-align:center;
-    color:#075c3c;
-    padding:20px;
-}
-
-.gallery {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
-    padding:30px;
-}
-
-.gallery img {
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-.gallery img:hover {
-    transform:scale(1.03);
-}
-.video-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.video-box {
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: white;
-}
-
-.video-box video {
-    width: 300px;
-    height: 200px;
+        *{box-sizing:border-box}body{font-family:Arial;margin:0;background:#f4f7fb}
+     header{background:green;color:white;text-align:center;padding:20px}header h1{font-family:Algerian,Georgia,serif}
+   nav{background:#022b52;position:sticky;top:0}.nav{display:flex;justify-content:center;flex-wrap:wrap}
+  nav a{color:white;text-decoration:none;padding:11px 8px;font-weight:bold}nav a:hover{background:#0b72b9}
+ section{padding:50px 5%}.container{max-width:1200px;margin:auto}
+h2{text-align:center;color:#063970;margin-bottom:30px}
+ .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .gallery img{width:100%;height:220px;object-fit:cover;border-radius:10px;cursor:pointer;transition:.3s}
+.gallery img:hover{transform:scale(1.03)}
+.popup{display:none;position:fixed;inset:0;background:#000e;z-index:1000;align-items:center;justify-content:center}
+.popup img{max-width:92%;max-height:90%}
+.close{position:absolute;right:30px;top:5px;color:white;font-size:50px;cursor:pointer}
+footer{background:green;color:white;text-align:center;padding:35px}
+@media(max-width:500px){nav a{font-size:11px;padding:8px 5px}.gallery img{height:160px}}
+.footer-photo {
+    width: 90px;
+    height: 90px;
     object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto 10px;
 }
-
-footer {
-    background:#043b27;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-/* Make the website fit on smartphones */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-nav a {
-    padding: 10px;
-}
-
-/* Smartphone screen */
-@media screen and (max-width: 600px) {
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    nav {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .container {
-        width: 94%;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-.gallery img {
-    cursor: pointer;
-    max-width: 100%;
-    height: auto;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup img {
-    max-width: 90%;
-    max-height: 85%;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-}
-
 </style>
 </head>
-
 <body>
 
-<header>
+<header><h1>RWENKOBWA SECONDARY SCHOOL</h1><p>School Gallery</p></header>
 
-<img src="images/badge.jpg">
+<nav><div class="nav">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="academics.html">Academics</a><a href="fees.html">Fees</a>
+<a href="sports.html">Sports</a><a href="activities.html">Activities</a><a href="gallery.html">Gallery</a><a href="staff.html">Staff</a>
+<a href="facilities.html">Facilities</a><a href="curriculum.html">Curriculum</a><a href="application.html">Apply</a><a href="contact.html">Contact</a>
+</div></nav>
 
-<h1>RWENKOBWA SECONDARY SCHOOL</h1>
-
-</header>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="administration.html">Administration</a>
-<a href="academics.html">Academics</a>
-<a href="staff.html">Staff</a>
-<a href="facilities.html">Facilities</a>
-<a href="boarding.html">Boarding</a>
-<a href="sports.html">Sports</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-<h2>School Gallery</h2>
+<section>
+<div class="container">
+<h2>Our School Gallery</h2>
 
 <div class="gallery">
-
-<img src="images/school.jpeg"
-onclik="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/buildings.jpg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/classrooms.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/computerlab.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/mainhall.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/domitory.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/boarding.jpg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/students.jpg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/dining.jpg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/football.jpg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/volleyball.jpg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/athletics.jpg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/prom1.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/prom2.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
- <img src="images/prom3.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-   <img src="images/prom4.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-    <img src="images/prom5.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-      <img src="images/prom6.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-       <img src="images/chaplain1.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-     <img src="images/chaplain2.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-   <img src="images/chaplain3.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
- <img src="images/chaplain4.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-<img src="images/chaplain5.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
- <img src="images/chaplain6.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-   <img src="images/chaplain7.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-    <img src="images/chaplain8.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-      <img src="images/chaplain9.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
-
-         <img src="images/chaplain10.jpeg"
-onclick="openImage(this.src)" style="cursor:pointer;">
+                    <img src="images/school.png" onclick="openImage(this.src)">
+                  <img src="images/students.png" onclick="openImage(this.src)">
+                <img src="images/students2.png" onclick="openImage(this.src)">
+              <img src="images/classroom.jpeg" onclick="openImage(this.src)">
+            <img src="images/classroom2.png" onclick="openImage(this.src)">
+          <img src="images/sports.jpg" onclick="openImage(this.src)">
+        <img src="images/football.jpg" onclick="openImage(this.src)">
+       <img src="images/netball.jpeg" onclick="openImage(this.src)">
+      <img src="images/athletics.jpg" onclick="openImage(this.src)">
+      <img src="images/computerlab.jpeg" onclick="openImage(this.src)">
+      <img src="images/library.jpg" onclick="openImage(this.src)">
+       <img src="images/dormitory.png" onclick="openImage(this.src)">
+         <img src="images/mainhall.png" onclick="openImage(this.src)">
+          <img src="images/chaplain1.jpeg" onclick="openImage(this.src)">
+<img src="images/chaplain2.jpeg" onclick="openImage(this.src)">
+<img src="images/chaplain3.jpeg" onclick="openImage(this.src)">
+<img src="images/chaplain4.jpeg" onclick="openImage(this.src)">
+    <img src="images/chaplain5.jpeg" onclick="openImage(this.src)">
+       <img src="images/chaplain6.jpeg" onclick="openImage(this.src)">
+           <img src="images/chaplain7.jpeg" onclick="openImage(this.src)">
+               <img src="images/chaplain8.jpeg" onclick="openImage(this.src)">
+                  <img src="images/chaplain9.jpeg" onclick="openImage(this.src)">
+                      <img src="images/chaplain10.jpeg" onclick="openImage(this.src)">
+                           <img src="images/chaplain11.jpeg" onclick="openImage(this.src)">
+                              <img src="images/chaplain12.jpeg" onclick="openImage(this.src)">
+                                  <img src="images/chaplain13.jpeg" onclick="openImage(this.src)">
+                                  <img src="images/chaplain14.jpeg" onclick="openImage(this.src)">
+                                  <img src="images/chaplain15.jpeg" onclick="openImage(this.src)">
+                                 <img src="images/chaplain16.jpeg" onclick="openImage(this.src)">
+                               <img src="images/chaplain17.jpeg" onclick="openImage(this.src)">
+                              <img src="images/chaplain18.jpeg" onclick="openImage(this.src)">
+                             <img src="images/chaplain19.jpeg" onclick="openImage(this.src)">
+                            <img src="images/chaplain20.jpeg" onclick="openImage(this.src)">
+                           <img src="images/chaplain21.jpeg" onclick="openImage(this.src)">
+                          <img src="images/chaplain22.jpeg" onclick="openImage(this.src)">
+                         <img src="images/chaplain23.jpeg" onclick="openImage(this.src)">
+                       <img src="images/chaplain24.jpeg" onclick="openImage(this.src)">
+                     <img src="images/chaplain25.jpeg" onclick="openImage(this.src)">
 </div>
 
-<h2>Our School Videos</h2>
-
-<div class="video-gallery">
-
-    <div class="video-box">
-        <video controls width="300">
-            <source src="videos/choir.mp4" type="video/mp4">
-            Your browser does not support video playback.
-        </video>
-        <p>School Sports</p>
-    </div>
-
-    <div class="video-box">
-        <video controls width="300">
-            <source src="videos/alevel.mp4" type="video/mp4">
-            Your browser does not support video playback.
-        </video>
-        <p>School Event</p>
-    </div>
-
-    <div class="video-box">
-        <video controls width="300">
-            <source src="videos/studentparent.mp4" type="video/mp4">
-            Your browser does not support video playback.
-        </video>
-        <p>Students Activities</p>
-    </div>
-
 </div>
+</section>
+
+<div class="popup" id="popup" onclick="closeImage()">
+<span class="close">&times;</span>
+<img id="largeImage">
+</div>
+
 <script>
-    function openImage(imageSource) {
-        document.getElementById("imagePopup").style.display = "flex";
-        document.getElementById("largeImage").src = imageSource;
-    }
-
-    function closeImage() {
-        document.getElementById("imagePopup").style.display = "none";
-    }
+function openImage(src){
+document.getElementById("popup").style.display="flex";
+document.getElementById("largeImage").src=src;
+}
+function closeImage(){
+document.getElementById("popup").style.display="none";
+}
 </script>
 
 <footer>
+<img src="images/atuhaire.png" alt="Atuhaire Brian" class="footer-photo">
 
-<p>&copy; 2026 Rwenkobwa Secondary School</p>
-
-</footer>
-
+    <h3>Atuhaire Brian</h3>
+    <p><b><marquee>Website Developer</marquee></b></p>
+&copy; 2026 Rwenkobwa Secondary School</footer>
 </body>
 </html>

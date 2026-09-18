@@ -1,238 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sports - Rwenkobwa Secondary School</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sports | Rwenkobwa Secondary School</title>
 <style>
-
-body {
-    margin:0;
-    font-family:Arial;
-    background:#f4f7f6;
-}
-
-header {
-    background:#075c3c;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-header img {
-    width:80px;
-    height:80px;
-    border-radius:50%;
-}
-
-nav {
-    background:#043b27;
-    text-align:center;
-    padding:15px;
-}
-
-nav a {
-    color:white;
-    text-decoration:none;
-    margin:8px;
-    font-weight:bold;
-}
-
-h2 {
-    text-align:center;
-    color:#075c3c;
-}
-
-.cards {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
-    padding:40px;
-}
-
-.card {
-    background:white;
-    width:280px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 3px 10px #ccc;
-    border-radius:10px;
-}
-
-.card img {
-    width:100%;
-    height:190px;
-    object-fit:cover;
-    border-radius:8px;
-}
-
-footer {
-    background:#043b27;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-/* Make the website fit on smartphones */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-nav a {
-    padding: 10px;
-}
-
-/* Smartphone screen */
-@media screen and (max-width: 600px) {
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    nav {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .container {
-        width: 94%;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
+*{box-sizing:border-box}body{font-family:Arial;margin:0;background:#f4f7fb}
+header{background:green;color:white;text-align:center;padding:20px}
+header h1{font-family:Algerian,Georgia,serif}
+nav{background:#022b52;position:sticky;top:0}.nav{display:flex;justify-content:center;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;padding:11px 8px;font-weight:bold}
+nav a:hover{background:#0b72b9}
+section{padding:50px 5%}.container{max-width:1100px;margin:auto}
+h2{text-align:center;color:#063970;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;padding:20px;border-radius:10px;box-shadow:0 3px 12px #0002}
+.card img{width:100%;height:200px;object-fit:cover;border-radius:8px;cursor:pointer}
+.card h3{color:#063970}
+footer{background:green;color:white;text-align:center;padding:35px}
+@media(max-width:700px){nav a{font-size:12px;padding:8px 5px}}
 </style>
 </head>
-
 <body>
 
-<header>
+<header><h1>RWENKOBWA SECONDARY SCHOOL</h1><p>Sports</p></header>
 
-<img src="images/badge.jpg">
+<nav><div class="nav">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="academics.html">Academics</a>
+<a href="fees.html">Fees</a><a href="sports.html">Sports</a><a href="activities.html">Activities</a>
+<a href="gallery.html">Gallery</a><a href="staff.html">Staff</a><a href="facilities.html">Facilities</a>
+<a href="curriculum.html">Curriculum</a><a href="application.html">Apply</a><a href="contact.html">Contact</a>
+</div></nav>
 
-<h1>RWENKOBWA SECONDARY SCHOOL</h1>
-
-</header>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="administration.html">Administration</a>
-<a href="academics.html">Academics</a>
-<a href="staff.html">Staff</a>
-<a href="facilities.html">Facilities</a>
-<a href="boarding.html">Boarding</a>
-<a href="sports.html">Sports</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-<h2>Sports and Games</h2>
+<section>
+<div class="container">
+<h2>Sports at Our School</h2>
 
 <div class="cards">
 
 <div class="card">
-
-<img src="images/football.jpg">
-
+<img src="images/football.jpg" onclick="openImage(this.src)">
 <h3>Football</h3>
-
-<p>
-Football develops teamwork, discipline and physical fitness.
-</p>
-
+<p>Students participate in football training, competitions and tournaments.</p>
 </div>
 
 <div class="card">
-
-<img src="images/volleyball.jpg">
-
-<h3>Volleyball</h3>
-
-<p>
-Students participate in volleyball training and competitions.
-</p>
-
+<img src="images/netball.jpeg" onclick="openImage(this.src)">
+<h3>Netball</h3>
+<p>Netball helps learners develop teamwork, fitness and sporting skills.</p>
 </div>
 
 <div class="card">
-
-<img src="images/athletics.jpg">
-
+<img src="images/athletics.jpg" onclick="openImage(this.src)">
 <h3>Athletics</h3>
-
-<p>
-Students participate in athletics and physical activities.
-</p>
-
+<p>Students participate in running, jumping and other athletic activities.</p>
 </div>
 
 <div class="card">
-
-<img src="images/basketball.jpg">
-
-<h3>Basketball</h3>
-
-<p>
-Basketball provides another opportunity for students
-to develop their sporting talents.
-</p>
-
+<img src="images/sports.jpg" onclick="openImage(this.src)">
+<h3>Other Sports</h3>
+<p>The school encourages learners to participate in different sporting activities.</p>
 </div>
 
 </div>
+</div>
+</section>
 
-<footer>
+<div id="popup" style="display:none;position:fixed;inset:0;background:#000d;align-items:center;justify-content:center">
+<span onclick="closeImage()" style="position:absolute;right:30px;top:10px;color:white;font-size:45px">&times;</span>
+<img id="largeImage" style="max-width:90%;max-height:90%">
+</div>
 
-<p>&copy; 2026 Rwenkobwa Secondary School</p>
+<script>
+function openImage(src){popup.style.display="flex";largeImage.src=src}
+function closeImage(){popup.style.display="none"}
+</script>
 
-</footer>
-
+<footer>&copy; 2026 Rwenkobwa Secondary School</footer>
 </body>
 </html>
