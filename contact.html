@@ -55,29 +55,27 @@ footer{background:green;color:white;text-align:center;padding:35px}
 <h3>Send Us Your Questions</h3>
 <p>Parents, guardians, students and visitors are welcome to contact the school for more information.</p>
 </div>
-
-<div class="box">
-
-<h3>Send Us a Message</h3>
-
-<form onsubmit="sendMessage(event)">
+<form action="https://formspree.io/f/xbgllvly" method="POST">
 
 <label>Your Name</label>
-<input type="text" required placeholder="Enter your name">
+<input type="text" name="name" required placeholder="Enter your name">
 
 <label>Email Address</label>
-<input type="email" required placeholder="Enter your email">
+<input type="email" name="email" required placeholder="Enter your email">
 
 <label>Telephone</label>
-<input type="tel" placeholder="07XXXXXXXX">
+<input type="tel" name="phone" placeholder="07XXXXXXXX">
 
 <label>Subject</label>
-<input type="text" required placeholder="Message subject">
+<input type="text" name="subject" required placeholder="Message subject">
 
 <label>Your Message</label>
-<textarea required placeholder="Write your message here"></textarea>
+<textarea name="message" required placeholder="Write your message here"></textarea>
 
 <button type="submit">SEND MESSAGE</button>
+
+</form>
+
 
 </form>
 
